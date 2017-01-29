@@ -1,6 +1,12 @@
 <p>Hello World</p>
 
-<ul class = "todo-list">
+<form id="new-todo">
+    <label for="body">NEW TODO</label>
+    <input type="text" name="body"/>
+    <button type="submit">SAVE</button>
+</form>
+
+<ul id = "todo-list">
     {{#each todos}}
     <li>{{this.body}}</li>
     {{/each}}

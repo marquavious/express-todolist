@@ -36,11 +36,10 @@ app.post('/todos',function(req, res) {
     console.log(req.body);
 var todo = req.body
 todos.push(todo)
-
-
     res.status(200).json(todo)
 })
 
+app.use(express.static('public'));
 
 
 app.listen(3000, function () {
