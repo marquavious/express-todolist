@@ -8,11 +8,14 @@ var app = express()
 app.engine('handlebars', handlebars({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
+var todos = [
+    {body:"take out laundry",completed: false},
+    {body:"take out trash",completed: true},
+    {body:"eat",completed: false}
+
+]
+
 app.get('/', function (req, res) {
-    var todos = [
-        {body:"take out laundry",completed: false},
-        {body:"take out trash",completed: true},
-    ]
     res.render('home', { todos: todos });
 });
 
